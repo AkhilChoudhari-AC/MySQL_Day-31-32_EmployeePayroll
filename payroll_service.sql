@@ -22,3 +22,9 @@ select * from employee_payroll;
 select * from employee_payroll where name="Akhil";
 select * from employee_payroll where salary=60000;
 select * from employee_payroll where startDate between '2022-08-25' And date(now());
+
+#UC6
+alter table employee_payroll add gender char(1);
+UPDATE employee_payroll set gender='M' where id='2';
+UPDATE employee_payroll set gender = 'F' WHERE id =4;
+UPDATE employee_payroll set gender = 'M' WHERE id =5;
