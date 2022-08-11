@@ -28,3 +28,11 @@ alter table employee_payroll add gender char(1);
 UPDATE employee_payroll set gender='M' where id='2';
 UPDATE employee_payroll set gender = 'F' WHERE id =4;
 UPDATE employee_payroll set gender = 'M' WHERE id =5;
+
+#UC7
+select gender,sum(salary) from employee_payroll group by gender; 
+select gender,min(salary) from employee_payroll;
+select gender,max(salary) from employee_payroll;
+select gender,avg(salary) from employee_payroll;
+select count(salary) from employee_payroll;
+set sql_safe_updates=0;
